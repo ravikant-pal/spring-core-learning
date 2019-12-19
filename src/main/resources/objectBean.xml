@@ -4,23 +4,23 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--	setter injection -->
-<!--	inner bean-->
-    <bean id="student" class="com.alok.Student">
-		<property name="sName" value="Ravi"/>
-		<property name="sId" value="300"/>
-		<property name="cheatSheet">
-			<bean class="com.alok.CheatSheet"/>
-		</property>
-	</bean>
-	<bean id="cheat" class="com.alok.CheatSheet"></bean>
+<!--	Constructor injection -->
 
-<!--	with reference-->
-	<bean id="anotherStudent" class="com.alok.AnotherStudent">
-		<property name="sName" value="Mohan"/>
-		<property name="sId" value="200"/>
-		<property name="cheatSheet" ref="cheat"/>
+	<bean id="cheat" class="com.alok.CheatSheet"/>
+    <bean id="student" class="com.alok.Student">
+		<constructor-arg name="sId" value="5"/>
+		<constructor-arg name="sName" value="Ram"/>
+		<constructor-arg name="cheatSheet" ref="cheat"/>
 	</bean>
+
+
+	<bean id="anotherStudent" class="com.alok.AnotherStudent">
+		<constructor-arg name="sId" value="1"/>
+		<constructor-arg name="sName" value="Brown"/>
+		<constructor-arg name="cheatSheet" ref="cheat"/>
+	</bean>
+
+
 </beans>
 
 

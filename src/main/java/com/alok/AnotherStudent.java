@@ -5,15 +5,9 @@ public class AnotherStudent {
     private int sId;
     private CheatSheet cheatSheet;
 
-    public void setsName(String sName) {
+    public AnotherStudent(String sName, int sId, CheatSheet cheatSheet) {
         this.sName = sName;
-    }
-
-    public void setsId(int sId) {
         this.sId = sId;
-    }
-
-    public void setCheatSheet(CheatSheet cheatSheet) {
         this.cheatSheet = cheatSheet;
     }
 

@@ -5,19 +5,11 @@ public class Student {
     private int sId;
     private CheatSheet cheatSheet;
 
-    public void setCheatSheet(CheatSheet cheatSheet) {
+    public Student(String sName, int sId, CheatSheet cheatSheet) {
+        this.sName = sName;
+        this.sId = sId;
         this.cheatSheet = cheatSheet;
     }
-
-    public void setsName(String sName) {
-        this.sName = sName;
-    }
-
-    public void setsId(int sId) {
-        this.sId = sId;
-    }
-
-
 
     public void studentDoingCheating() {
         System.out.print("The student "+sName+" is cheating, his/her id is :"+sId+" with this ->>> ");
