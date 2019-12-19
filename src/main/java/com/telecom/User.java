@@ -1,17 +1,16 @@
-package com.alok;
+package com.telecom;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Exam {
+public class User {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("objectBean.xml");
 
-        Student std= context.getBean("student",Student.class);
-        AnotherStudent student = context.getBean("anotherStudent",AnotherStudent.class);
+        Airtel airtel = context.getBean("airtel",Airtel.class);
 
-        std.studentDoingCheating();
-        student.studentDoingCheating();
+
+        System.out.println(airtel.getServicesStarted());
 
     }
 }

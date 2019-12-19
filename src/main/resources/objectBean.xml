@@ -6,21 +6,14 @@
 
 <!--	Constructor injection -->
 
-	<bean id="cheat" class="com.alok.CheatSheet"/>
-    <bean id="student" class="com.alok.Student">
-		<constructor-arg name="sId" value="5"/>
-		<constructor-arg name="sName" value="Ram"/>
-		<constructor-arg name="cheatSheet" ref="cheat"/>
+	<bean id="sms" class="com.telecom.SmsService"/>
+	<bean id="call" class="com.telecom.CallService"/>
+	<bean id="data" class="com.telecom.DataService"/>
+
+	<bean id="airtel" class="com.telecom.Airtel">
+		<constructor-arg name="nameOfSim" value="Airtel"/>
+		<constructor-arg name="services" ref="data"/>
 	</bean>
-
-
-	<bean id="anotherStudent" class="com.alok.AnotherStudent">
-		<constructor-arg name="sId" value="1"/>
-		<constructor-arg name="sName" value="Brown"/>
-		<constructor-arg name="cheatSheet" ref="cheat"/>
-	</bean>
-
-
 </beans>
 
 
